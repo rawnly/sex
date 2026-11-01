@@ -41,7 +41,7 @@ func (c *Client) Activity(ctx context.Context) ([]Activity, error) {
 		return nil, err
 	}
 	var res struct {
-		Entries []Activity `json:"entries"`
+		Entries luaList[Activity] `json:"entries"`
 	}
 	if err := json.Unmarshal(out, &res); err != nil {
 		return nil, fmt.Errorf("rex: decoding activity: %w", err)

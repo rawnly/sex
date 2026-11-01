@@ -323,3 +323,19 @@ func TestActivityCalls(t *testing.T) {
 		t.Fatal("want error")
 	}
 }
+
+// Lua encodes an empty table as an object, as rex do returns with no activity or sessions.
+func TestEmptyLuaLists(t *testing.T) {
+	c, _ := newClient(`{"entries":{}}`)
+	if got, err := c.Activity(context.Background()); err != nil || len(got) != 0 {
+		t.Fatalf("got %+v, err %v", got, err)
+	}
+	c, _ = newClient(`{"sessions":{}}`)
+	if got, err := c.Snapshot(context.Background(), ""); err != nil || len(got) != 0 {
+		t.Fatalf("got %+v, err %v", got, err)
+	}
+	c, _ = newClient(`{"entries":{"a":1}}`)
+	if _, err := c.Activity(context.Background()); err == nil {
+		t.Fatal("want decode error")
+	}
+}

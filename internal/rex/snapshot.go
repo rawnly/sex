@@ -33,7 +33,7 @@ func (c *Client) Snapshot(ctx context.Context, clientID string) ([]Snapshot, err
 		return nil, err
 	}
 	var res struct {
-		Sessions []Snapshot `json:"sessions"`
+		Sessions luaList[Snapshot] `json:"sessions"`
 	}
 	if err := json.Unmarshal(out, &res); err != nil {
 		return nil, fmt.Errorf("rex: decoding snapshot: %w", err)

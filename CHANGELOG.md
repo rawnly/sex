@@ -2,6 +2,16 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.4.4](https://github.com/rtuszik/sex/compare/5a405de3b92b0793a9283503f24bf7cab2c9d1a8..v0.4.4) - 2026-11-01
+#### Bug Fixes
+- (**plugin**) start the picker with sex found on seeion host - ([ffedc30](https://github.com/rtuszik/sex/commit/ffedc3052c39df90418134d1e3db79465f868b1d)) - Robin Tuszik
+#### Documentation
+- (**readme**) improve prose and add links - ([5a405de](https://github.com/rtuszik/sex/commit/5a405de3b92b0793a9283503f24bf7cab2c9d1a8)) - Robin Tuszik
+#### Tests
+- (**plugin**) tolerate missing fzf in script - ([96bb2be](https://github.com/rtuszik/sex/commit/96bb2bea0f59a7120a1949764caad9f9fbaedfda)) - Robin Tuszik
+
+- - -
+
 ## [v0.4.3](https://github.com/rtuszik/sex/compare/23a24277f05ee2f0d9f70fd92ccfab897a2e56df..v0.4.3) - 2026-10-31
 #### Bug Fixes
 - (**pick**) restore source icons - ([1ee5e6e](https://github.com/rtuszik/sex/commit/1ee5e6ef525dc44d2503e6e4864f80784a97bb01)) - Robin Tuszik

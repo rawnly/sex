@@ -8,13 +8,15 @@ not exist, and switches the [Rex](https://www.superlogical.com/rex/docs/) app to
 
 sex takes config and [zoxide](https://github.com/ajeetdsouza/zoxide) entries from `sesh list --json`.
 
+![The sex picker with running Rex sessions, sesh config sessions, zoxide directories, and a preview](docs/pick.png)
+
 ## Requirements
 
 - [Rex](https://www.superlogical.com/rex/docs/installation).
 - [sesh](https://github.com/joshmedeski/sesh) 2.33 or later, [zoxide](https://github.com/ajeetdsouza/zoxide), [fzf](https://github.com/junegunn/fzf), and [git](https://git-scm.com).
 - [Go](https://go.dev) 1.26 or later, to build from source.
 
-The [Rex](https://www.superlogical.com/rex/docs/) app must have Remote Control enabled (Settings, [Rex](https://www.superlogical.com/rex/docs/) Server) for the command line to switch sessions.
+The [Rex](https://www.superlogical.com/rex/docs/) app must have Remote Control enabled (Settings, Rex Server) for the command line to switch sessions.
 
 Run `sex doctor` to check the setup.
 
@@ -111,6 +113,8 @@ In the picker, ctrl-a, ctrl-t, ctrl-g, and ctrl-x show all sources, [Rex](https:
 sessions, config sessions, and [zoxide](https://github.com/ajeetdsouza/zoxide) directories. ctrl-d destroys the
 selected [Rex](https://www.superlogical.com/rex/docs/) session. ctrl-/ toggles the preview. In the activity picker,
 ctrl-r reloads the list.
+
+![The sex activity picker with blocked, error, working, and done programs](docs/activity.png)
 
 To use a different [fzf](https://github.com/junegunn/fzf) command:
 

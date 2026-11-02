@@ -38,10 +38,9 @@ go install github.com/rtuszik/sex/cmd/sex@latest
 
 The plugin adds three actions to [Rex](https://www.superlogical.com/rex/docs/): `sex_pick` opens the session picker in a floating layer, `sex_activity` opens the activity picker, and `sex_last` switches to the previously shown session.
 
-`sex plugin` prints a small loader. Save it anywhere [Rex](https://www.superlogical.com/rex/docs/)'s `require` finds
-it; `sex plugin install` writes it to sex.lua in the directory of
-`$REX_CONFIG`, `$XDG_CONFIG_HOME/rex`, or `~/.config/rex`, and accepts
-`--path`. Load it from init.lua and bind the actions:
+`sex plugin install` adds `sex.lua` to `$REX_CONFIG`, `$XDG_CONFIG_HOME/rex`. (`--path` accepted)
+
+Add the plugin loader to your `rex.lua`:
 
 ```lua
 require("sex").setup()
@@ -50,8 +49,8 @@ rex.bind("ctrl+b>shift+l", "sex_last")
 rex.bind("ctrl+b>shift+a", "sex_activity")
 ```
 
-Then run `rex config reload`. On each configuration load the loader runs
-`sex plugin --source`, so the plugin always matches the installed binary.
+Then run `rex config reload`. On rex config load/reload the loader runs
+`sex plugin --source`, to ensure the plugin is kept up to date.
 `sex plugin --source` prints the plugin itself.
 
 `setup` accepts a table with these fields:

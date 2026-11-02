@@ -102,7 +102,7 @@ sex preview name     Print a session's screen or a directory preview.
 sex kill name        Destroy a running Rex session.
 sex root             Print the git root name of the current session.
 sex doctor           Check Rex, Remote Control, sesh, zoxide, and fzf.
-sex plugin           Print the Rex plugin.
+sex plugin           Print the Rex plugin loader.
 ```
 
 The global option `--client` selects the [Rex](https://www.superlogical.com/rex/docs/) app to switch when more than
